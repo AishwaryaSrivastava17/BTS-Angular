@@ -1,0 +1,115 @@
+
+	<h1>BUG TRACKING SYSTEM</h1>
+	<div>
+		<h2>Bug Details</h2>
+  </div>
+	<br>
+	<form id="bugCreateForm">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="form-group">
+						<label class="control-label col-sm-3  col-md-offset-4" for="Name">Name<span>*</span></label>
+						<div class="col-sm-9">
+              <input [(ngModel)]='bug.name'placeholder='Name'type='text'>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3  col-md-offset-4" for="pwd">Priority</label>
+						<div class="col-sm-9">
+							<select name="priority" class="form-control" id="priority">
+								<option value="LOW">LOW</option>
+								<option value="MEDIUM">MEDIUM</option>
+								<option value="HIGH">HIGH</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3  col-md-offset-4 " for="pwd">Type</label>
+						<div class="col-sm-9">
+							<select name="type" class="form-control" id="type">
+								<option value="UNITLEVEL">UNIT-LEVEL</option>
+								<option value="SYSTEMLEVEL">SYSTEM-LEVEL</option>
+								<option value="OUTOFBOUND">OUT OF BOUND</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3  col-md-offset-4 " for="pwd">ETA
+							Date<span>*</span>
+						</label>
+						<div class="col-sm-9">
+							<input id="etaDate" type="date" class="form-control" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3 col-md-offset-4" for="pwd">Module<span>*</span></label>
+						<div class="col-sm-9">
+							<input [(ngModel)]='bug.module'placeholder='Module'type='text'>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3 col-md-offset-4" for="pwd">Version</label>
+						<div class="col-sm-9">
+							<input [(ngModel)]='bug.buildVersion'placeholder='Build Version'type='text'>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3 col-md-offset-4" for="pwd">Description<span>*</span></label>
+						<div class="col-sm-9">
+							<textarea id="description" class="form-control" name="descrption"
+								rows="2" required></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="form-group">
+						<label class="control-label col-sm-3 col-md-offset-2" for="pwd">Severity</label>
+						<div class="col-sm-9">
+							<select name="severity" class="form-control" id="severity">
+								<option value="LOW">LOW</option>
+								<option value="MEDIUM">MEDIUM</option>
+								<option value="HIGH">HIGH</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3 col-md-offset-2" for="pwd">Project
+							Id<span>*</span>
+						</label>
+						<div class="col-sm-9">
+							<input [(ngModel)]='bug.projectId'placeholder='Project Id'type='text'>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3 col-md-offset-2" for="pwd">Tester
+							Id<span>*</span>
+						</label>
+						<div class="col-sm-9">
+							<input [(ngModel)]='bug.testerId'placeholder='Tester Id'type='text'>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3 col-md-offset-2" for="pwd">Synopsis<span>*</span></label>
+						<div class="col-sm-9">
+							<textarea id="synopsis" class="form-control" name="synopsis"
+								rows="2" required></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3 col-md-offset-2" for="pwd">Product<span>*</span></label>
+						<div class="col-sm-9">
+              <input [(ngModel)]='bug.product'placeholder='Product'type='text'>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</form>
+	<button onclick="save()" type="Submit"
+		class="btn btn-primary btn-lg btn-block submitBtn">Submit</button>
+	<!-- Footer -->
+	<div>
+	</div>
+
