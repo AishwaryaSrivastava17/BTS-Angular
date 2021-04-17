@@ -1,16 +1,18 @@
-export
- class Bug{
-   id:string="";
+
+export class Bug{
    name:string="";
    module:string="";
    buildVersion:string="";
    description:string="";
    projectId:string="";
-   developerId:string="";
    testerId:string="";
    synopsis:string="";
    product:string="";
    submittedOn:Date=new Date();
-   eta:Date=new Date();
+   etaDate:Date=new Date();
+   priority:string="LOW";
+   severity:string="LOW";
+   status:string="NEW";
+   type:string="UNITLEVEL";
 
    }
