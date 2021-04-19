@@ -9,16 +9,19 @@ export class BugService {
 
   constructor(private http: HttpClient) { }
   save(bug: Bug) {
-    return this.http.post('http://localhost:8085/bug', bug, {
+    return this.http.post('http://localhost:8082/bug', bug, {
       headers: { "content-type": 'application/json' },
       responseType:"text"
     });
   }
   getAllBugs(){
-    return this.http.get('http://localhost:8085/bug')
+    return this.http.get('http://localhost:8082/bug')
   }
 
   getBugName(bugname:string  ){
-    return this.http.get('http://localhost:8085/bug/name'+'/'+bugname);
+    return this.http.get('http://localhost:8082/bug/name'+'/'+bugname);
+  }
+  getBugStatus(bugstatus:string  ){
+    return this.http.get('http://localhost:8082/bug/status'+'/'+bugstatus);
   }
 }

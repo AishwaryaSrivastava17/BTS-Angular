@@ -1,15 +1,7 @@
-
 body {
 	background-color: rgb(214, 221, 226);
 }
-input{
-width: 70%;
-height:40%;
-}
-textarea{
-  width:110%;
-  height:100%;
-}
+
 h1 {
 	text-align: center;
 	margin-top: -40px;
@@ -39,4 +31,3 @@ footer {
 	transform: translateX(-50%);
 	height: 100px;
 }
-
